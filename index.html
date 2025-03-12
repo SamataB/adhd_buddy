@@ -11,46 +11,47 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">ADHD Buddy 🚀</a>
-            <button class="btn btn-warning" id="focus-mode-toggle">🔕 Focus Mode</button>
+            <a class="navbar-brand">🚀 ADHD Buddy</a>
+            <button class="btn focus-mode-btn" id="focus-mode-toggle">🔕 Focus Mode</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero text-center text-white">
-        <h1>Stay Focused, Stay Organized</h1>
-        <p>Your AI-powered assistant for better productivity</p>
-    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stay Focused, Stay Organized</h1>
+            <p>AI-powered task management built for productivity.</p>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </section>
 
-    <!-- Task Manager Section -->
-    <div class="container mt-4">
-        <h3>📋 Task Manager</h3>
-        <div class="input-group mb-3">
-            <input type="text" id="taskInput" class="form-control" placeholder="Enter a new task">
+    <!-- Task Manager -->
+    <section class="tasks container">
+        <h2>📋 Task Manager</h2>
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
             <button class="btn btn-success" onclick="addTask()">➕ Add Task</button>
         </div>
-        <ul class="list-group" id="taskList"></ul>
-    </div>
+        <ul class="task-list" id="taskList"></ul>
+    </section>
 
-    <!-- Reminders Section -->
-    <div class="container mt-4">
-        <h3>⏳ Smart Reminders</h3>
-        <p>AI-generated reminders based on your daily routine.</p>
-        <ul class="list-group" id="remindersList">
-            <li class="list-group-item">🔔 Take a short break in 10 minutes</li>
-            <li class="list-group-item">📖 Review notes for your next task</li>
+    <!-- Reminders -->
+    <section class="reminders container">
+        <h2>⏳ Smart Reminders</h2>
+        <p>AI-generated reminders to keep you on track.</p>
+        <ul class="reminder-list" id="remindersList">
+            <li>🔔 Take a break in 10 minutes</li>
+            <li>📖 Review your next task</li>
         </ul>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center mt-5 p-3 bg-light">
+    <footer>
         <p>© 2025 ADHD Buddy. All Rights Reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
