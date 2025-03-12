@@ -4,60 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADHD Buddy - AI Task Assistant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>ADHD Buddy</h1>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#contact">Get Started</a></li>
-            </ul>
-        </nav>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">ADHD Buddy 🚀</a>
+            <button class="btn btn-warning" id="focus-mode-toggle">🔕 Focus Mode</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center text-white">
+        <h1>Stay Focused, Stay Organized</h1>
+        <p>Your AI-powered assistant for better productivity</p>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>AI-Powered Support for ADHD Management</h2>
-            <p>Stay focused, organized, and on top of your tasks with ADHD Buddy, your personalized AI-powered assistant.</p>
-            <button id="start-btn">Get Started</button>
+    <!-- Task Manager Section -->
+    <div class="container mt-4">
+        <h3>📋 Task Manager</h3>
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter a new task">
+            <button class="btn btn-success" onclick="addTask()">➕ Add Task</button>
         </div>
-    </section>
+        <ul class="list-group" id="taskList"></ul>
+    </div>
 
-    <section id="features" class="features">
-        <h2>Why Choose ADHD Buddy?</h2>
-        <div class="feature-list">
-            <div class="feature">
-                <h3>📅 Smart Reminders</h3>
-                <p>Never miss a task with AI-generated reminders tailored to your routine.</p>
-            </div>
-            <div class="feature">
-                <h3>🧠 Cognitive Support</h3>
-                <p>Agentic AI helps structure your workflow for better focus and efficiency.</p>
-            </div>
-            <div class="feature">
-                <h3>🚀 Task Prioritization</h3>
-                <p>Automatically ranks your tasks based on urgency and importance.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Reminders Section -->
+    <div class="container mt-4">
+        <h3>⏳ Smart Reminders</h3>
+        <p>AI-generated reminders based on your daily routine.</p>
+        <ul class="list-group" id="remindersList">
+            <li class="list-group-item">🔔 Take a short break in 10 minutes</li>
+            <li class="list-group-item">📖 Review notes for your next task</li>
+        </ul>
+    </div>
 
-    <section id="how-it-works" class="how-it-works">
-        <h2>How It Works</h2>
-        <p>Simply sign up, set your preferences, and let ADHD Buddy guide you through your day with intelligent task management.</p>
-    </section>
-
-    <section id="contact" class="cta">
-        <h2>Ready to Boost Your Productivity?</h2>
-        <p>Join thousands of users improving their focus and organization.</p>
-        <button id="contact-btn">Sign Up Now</button>
-    </section>
-
-    <footer>
+    <!-- Footer -->
+    <footer class="text-center mt-5 p-3 bg-light">
         <p>© 2025 ADHD Buddy. All Rights Reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
