@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADHD Buddy - AI Task Assistant</title>
+    <title>ADHD Buddy - AI Productivity Assistant</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -11,44 +11,95 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand">🚀 ADHD Buddy</a>
-            <button class="btn focus-mode-btn" id="focus-mode-toggle">🔕 Focus Mode</button>
+            <a class="navbar-brand" href="#">ADHD Buddy 🚀</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Stay Focused, Stay Organized</h1>
-            <p>AI-powered task management built for productivity.</p>
-            <button class="btn btn-primary">Get Started</button>
+    <header id="home" class="hero text-center text-white">
+        <div class="container">
+            <h1>Stay Focused, Stay Productive</h1>
+            <p>Your AI-powered assistant for managing ADHD and improving efficiency.</p>
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <button class="btn btn-primary">Subscribe Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features container">
+        <h2>Why Choose ADHD Buddy?</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>📅 Smart Reminders</h3>
+                <p>AI-generated reminders to keep you on track.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>🧠 Focus Mode</h3>
+                <p>Block distractions and boost concentration.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>🚀 Task Prioritization</h3>
+                <p>Let AI rank your tasks by urgency and importance.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Task Manager -->
-    <section class="tasks container">
-        <h2>📋 Task Manager</h2>
-        <div class="task-input">
-            <input type="text" id="taskInput" placeholder="Enter a task...">
-            <button class="btn btn-success" onclick="addTask()">➕ Add Task</button>
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials text-center">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>“ADHD Buddy has transformed how I manage my day. I get more done without feeling overwhelmed!”</p>
+            <strong>— Jane Doe, ADHD Buddy User</strong>
         </div>
-        <ul class="task-list" id="taskList"></ul>
     </section>
 
-    <!-- Reminders -->
-    <section class="reminders container">
-        <h2>⏳ Smart Reminders</h2>
-        <p>AI-generated reminders to keep you on track.</p>
-        <ul class="reminder-list" id="remindersList">
-            <li>🔔 Take a break in 10 minutes</li>
-            <li>📖 Review your next task</li>
-        </ul>
+    <!-- Pricing -->
+    <section id="pricing" class="pricing container text-center">
+        <h2>Choose Your Plan</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h3>Free Plan</h3>
+                    <p>$0/month</p>
+                    <p>Basic AI reminders & task manager.</p>
+                    <button class="btn btn-outline-light">Get Started</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h3>Pro Plan</h3>
+                    <p>$9.99/month</p>
+                    <p>Advanced AI prioritization & focus mode.</p>
+                    <button class="btn btn-primary">Upgrade Now</button>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Contact -->
+    <section id="contact" class="contact text-center">
+        <h2>Get in Touch</h2>
+        <p>Have questions? We'd love to hear from you.</p>
+        <button class="btn btn-outline-primary">Contact Us</button>
+    </section>
+
+    <footer class="text-center">
         <p>© 2025 ADHD Buddy. All Rights Reserved.</p>
     </footer>
 
