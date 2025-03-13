@@ -54,6 +54,27 @@ body {
     margin-top: 20px;
 }
 
+/* Alert Box Styling */
+.alert-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
+    color: white;
+}
+
+.alert-box.success {
+    background: #4CAF50;
+}
+
+.alert-box.error {
+    background: #f44336;
+}
+
+
 /* Testimonials */
 .testimonials {
     padding: 80px;
