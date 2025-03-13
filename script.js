@@ -27,19 +27,7 @@ function validateEmail(email) {
     return regex.test(email);
 }
 
-// Function to Show Alerts (Success/Error)
-function showAlert(message, type) {
-    let alertBox = document.createElement("div");
-    alertBox.className = `alert-box ${type}`;
-    alertBox.innerText = message;
-
-    document.body.appendChild(alertBox);
-    setTimeout(() => {
-        alertBox.remove();
-    }, 3000);
-}
-
-// Animate CTA Button on Hover
+// CTA Button Hover Effect
 document.querySelector(".btn-warning").addEventListener("mouseover", function() {
     this.style.transform = "scale(1.1)";
     this.style.transition = "0.3s";
