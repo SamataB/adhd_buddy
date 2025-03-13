@@ -1,4 +1,4 @@
-// Smooth Scroll for Navigation
+// Smooth Scroll for Navigation Links
 document.querySelectorAll('a.nav-link').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -14,20 +14,37 @@ document.querySelector(".btn-primary").addEventListener("click", function() {
     let emailValue = emailInput.value.trim();
 
     if (!validateEmail(emailValue)) {
-        alert("Please enter a valid email address!");
+        showAlert("Please enter a valid email address!", "error");
     } else {
-        alert("Thank you for subscribing!");
+        showAlert("Thank you for subscribing!", "success");
         emailInput.value = "";
     }
 });
 
-// Email Validation Function
+// Function to Validate Email
 function validateEmail(email) {
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
 
-// Animate Hero Section on Load
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".hero").classList.add("animate-hero");
+// Function to Show Alerts (Success/Error)
+function showAlert(message, type) {
+    let alertBox = document.createElement("div");
+    alertBox.className = `alert-box ${type}`;
+    alertBox.innerText = message;
+
+    document.body.appendChild(alertBox);
+    setTimeout(() => {
+        alertBox.remove();
+    }, 3000);
+}
+
+// Animate CTA Button on Hover
+document.querySelector(".btn-warning").addEventListener("mouseover", function() {
+    this.style.transform = "scale(1.1)";
+    this.style.transition = "0.3s";
+});
+
+document.querySelector(".btn-warning").addEventListener("mouseleave", function() {
+    this.style.transform = "scale(1)";
 });
