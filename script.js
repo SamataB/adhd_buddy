@@ -1,4 +1,4 @@
-// Add task function
+// Add Task Function
 function addTask() {
     let taskInput = document.getElementById("taskInput");
     let taskText = taskInput.value.trim();
@@ -6,24 +6,16 @@ function addTask() {
 
     let taskList = document.getElementById("taskList");
     let li = document.createElement("li");
-    li.className = "list-group-item";
     li.innerHTML = `${taskText} 
-        <button class="btn btn-danger btn-sm" onclick="removeTask(this)">❌</button>
-        <button class="btn btn-primary btn-sm" onclick="completeTask(this)">✔️</button>`;
+        <button class="delete-btn" onclick="removeTask(this)">❌</button>`;
     
     taskList.appendChild(li);
     taskInput.value = "";
 }
 
-// Remove task function
+// Remove Task
 function removeTask(button) {
     button.parentElement.remove();
-}
-
-// Mark task as complete
-function completeTask(button) {
-    let task = button.parentElement;
-    task.classList.toggle("completed");
 }
 
 // Focus Mode Toggle
