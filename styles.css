@@ -16,11 +16,10 @@ body {
 .hero {
     padding: 100px 0;
     background: linear-gradient(135deg, #1e1e1e 20%, #121212 100%);
-    text-align: center;
 }
 
 .hero img {
-    max-width: 100%;
+    max-width: 90%;
     border-radius: 10px;
 }
 
@@ -34,46 +33,23 @@ body {
     margin-bottom: 40px;
 }
 
-/* Call-to-Action (New) */
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+/* Call-to-Action */
 .cta {
     padding: 80px 20px;
     background: #ff9800;
     color: #fff;
 }
-
-.cta h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.cta p {
-    font-size: 1.2rem;
-}
-
-.cta button {
-    margin-top: 20px;
-}
-
-/* Alert Box Styling */
-.alert-box {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    z-index: 1000;
-    color: white;
-}
-
-.alert-box.success {
-    background: #4CAF50;
-}
-
-.alert-box.error {
-    background: #f44336;
-}
-
 
 /* Testimonials */
 .testimonials {
