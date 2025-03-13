@@ -2,81 +2,175 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADHD Buddy - AI Focus Assistant</title>
+    <title>ADHD Buddy - AI Assistant</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* General Styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background: #0D0D0D; color: white; text-align: center; padding: 0 20px; }
-        
-        /* Navbar */
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: #FFD700; }
-        .nav-links a { color: white; text-decoration: none; margin: 0 15px; font-size: 1rem; }
-        .nav-links a:hover { color: #FFD700; }
-
-        /* Hero Section */
-        .hero { padding: 80px 0; }
-        .hero h1 { font-size: 2.5rem; }
-        .hero p { font-size: 1.2rem; margin: 10px 0 20px; color: #bbb; }
-        .btn { display: inline-block; padding: 12px 25px; font-size: 1rem; margin: 10px; border-radius: 5px; text-decoration: none; transition: 0.3s; }
-        .btn-primary { background: #FFD700; color: black; }
-        .btn-primary:hover { background: #FFC107; }
-        .btn-outline { border: 2px solid #FFD700; color: #FFD700; }
-        .btn-outline:hover { background: #FFD700; color: black; }
-
-        /* Features */
-        .features { padding: 50px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .feature { background: #222; padding: 20px; width: 280px; border-radius: 10px; }
-        .feature h3 { margin-bottom: 10px; }
-
-        /* Footer */
-        footer { margin-top: 50px; padding: 20px; font-size: 0.9rem; color: #bbb; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            color: #1a202c;
+            background: linear-gradient(to bottom, #fffbf7, #ffffff);
+        }
+        nav {
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #FF6A3D;
+        }
+        nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #1a202c;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav .active {
+            color: #FF6A3D;
+        }
+        .btn-primary {
+            background: #FF6A3D;
+            color: white!important;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .hero .highlight {
+            color: #FF6A3D;
+            position: relative;
+        }
+        .hero .highlight::after {
+            content: "";
+            width: 100%;
+            height: 8px;
+            background: rgba(255,106,61,0.3);
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            border-radius: 4px;
+            z-index: -1;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            width: 260px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            color: #FF6A3D;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+            background: #fff;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+        }
+        @media(max-width:768px){
+            nav {padding: 10px 20px;}
+            .features{flex-direction: column; align-items: center;}
+            .card {width: 90%;}
+            .hero {padding-top: 50px;}
+        }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">🚀 ADHD Buddy</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#features">Features</a>
-            <a href="#contact">Contact</a>
+    <nav>
+        <div class="logo">🧠 ADHD Buddy</div>
+        <div>
+            <a href="#" class="active">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+            <a href="#" class="btn-primary">Get Started</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Stay Focused, Stay Productive</h1>
-        <p>Your AI-powered assistant for managing ADHD and boosting efficiency.</p>
-        <a href="#" class="btn btn-primary">Get Started</a>
-        <a href="#" class="btn btn-outline">Learn More</a>
+    <section class="hero">
+        <h1>Break Tasks into <span class="highlight">Manageable Steps</span> with AI</h1>
+        <p>Your AI-powered assistant designed specifically to support people with ADHD in achieving clarity, focus, and productivity.</p>
+        <a href="#" class="btn-primary">Upload Your First Task</a>
     </section>
 
     <!-- Features -->
-    <section id="features">
-        <h2>Why Choose ADHD Buddy?</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>📅 Smart Reminders</h3>
-                <p>AI-generated reminders to keep you on track.</p>
-            </div>
-            <div class="feature">
-                <h3>🧠 Focus Mode</h3>
-                <p>Block distractions and boost concentration.</p>
-            </div>
-            <div class="feature">
-                <h3>🚀 Task Prioritization</h3>
-                <p>Let AI rank your tasks by urgency and importance.</p>
-            </div>
+    <section class="features">
+        <div class="card">
+            <h3>📅 Smart Reminders</h3>
+            <p>AI-customized reminders to help you stay organized.</p>
+        </div>
+        <div class="card">
+            <h3>⏳ Focus Mode</h3>
+            <p>Structured sessions designed to maximize productivity.</p>
+        </div>
+        <div class="card">
+            <h3>🚀 Prioritization</h3>
+            <p>AI-driven task prioritization based on importance and urgency.</p>
         </div>
     </section>
 
+    <!-- Simple AI Interaction -->
+    <section style="padding:30px; text-align:center;">
+        <h2>🤖 Chat with your AI</h2>
+        <input id="query" placeholder="Ask about focus, tasks..." style="padding:10px;width:70%;max-width:400px;border-radius:8px;border:1px solid #ddd;margin-top:15px;">
+        <br>
+        <button onclick="askAI()" class="btn-primary" style="margin-top:15px;">Ask AI</button>
+        <p id="response" style="color:#FF6A3D;margin-top:15px;font-weight:600;"></p>
+    </section>
+
     <!-- Footer -->
-    <footer>
-        © 2025 ADHD Buddy. All Rights Reserved.
-    </footer>
+    <footer>© 2025 ADHD Buddy. All Rights Reserved.</footer>
+
+    <script>
+        function askAI(){
+            let q=document.getElementById('query').value.toLowerCase();
+            let res="I'm here to support your productivity!";
+            if(q.includes("task")) res="Break tasks into small actionable steps.";
+            if(q.includes("focus")) res="Try the Pomodoro method: 25 mins work, 5 mins rest.";
+            if(q.includes("remind")) res="Clearly set reminders for each important event.";
+            document.getElementById('response').innerText=res;
+        }
+    </script>
 
 </body>
 </html>
