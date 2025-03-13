@@ -16,6 +16,7 @@ body {
 .hero {
     padding: 100px 0;
     background: linear-gradient(135deg, #1e1e1e 20%, #121212 100%);
+    text-align: center;
 }
 
 .hero img {
@@ -26,39 +27,36 @@ body {
 /* Features */
 .features {
     padding: 80px 20px;
+    background: #181818;
 }
 
 .features h2 {
     margin-bottom: 40px;
 }
 
-/* Testimonials */
-.testimonials {
-    padding: 80px;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Pricing */
-.pricing {
+/* Call-to-Action (New) */
+.cta {
     padding: 80px 20px;
+    background: #ff9800;
+    color: #fff;
 }
 
-.pricing-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 8px;
-    margin: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-}
-
-.price {
-    font-size: 1.5rem;
+.cta h2 {
+    font-size: 2rem;
     font-weight: bold;
 }
 
-/* Contact */
-.contact {
-    padding: 60px;
+.cta p {
+    font-size: 1.2rem;
+}
+
+.cta button {
+    margin-top: 20px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 80px;
     background: rgba(255, 255, 255, 0.1);
 }
 
